@@ -1,0 +1,1 @@
+[NatCam](https://assetstore.unity.com/packages/tools/integration/natcam-webcam-api-52154) is not included in this repository due to license.
