@@ -73,17 +73,19 @@ public class NatMicCorder : MonoBehaviour {
 
 	// Invoked by NatCorder once video recording is complete
 	private void OnRecording (string path) {
-		// Playback the recording
-		#if UNITY_EDITOR
-		UnityEditor.EditorUtility.OpenWithDefaultApp(path);
-		#elif UNITY_IOS
-		Handheld.PlayFullScreenMovie("file://" + path);
-		#elif UNITY_ANDROID
-		Handheld.PlayFullScreenMovie(path);
-		#endif
 		// Share
 		if (shareRecordings) 
 			NatShare.ShareMedia(path);
+		// Playback the recording
+		else {
+			#if UNITY_EDITOR
+			UnityEditor.EditorUtility.OpenWithDefaultApp(path);
+			#elif UNITY_IOS
+			Handheld.PlayFullScreenMovie("file://" + path);
+			#elif UNITY_ANDROID
+			Handheld.PlayFullScreenMovie(path);
+			#endif
+		}
 	}
 	#endregion
 }

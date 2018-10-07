@@ -689,6 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d042f432f2d9462489eec83b6d7e4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shareRecordings: 1
   recordingCamera: {fileID: 222217089}
   previewRawImage: {fileID: 1655923234}
   previewAspectFitter: {fileID: 1655923236}

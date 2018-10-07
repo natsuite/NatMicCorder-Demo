@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_3_1;UNITY_2017_3;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_OSX;PLATFORM_STANDALONE;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_3_1;UNITY_2017_3;UNITY_2017;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_EVENT_QUEUE;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -51,7 +51,73 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\NatCam\Examples\GreyCam\GreyCam.cs" />
+     <Compile Include="Assets\NatCam\Examples\MiniCam\Focuser.cs" />
+     <Compile Include="Assets\NatCam\Examples\MiniCam\MiniCam.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\DeviceCamera.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\INatCam.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\INatCamDevice.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\NatCam.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\NatCamDocs.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\NatCamTypes.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\OrientationUtility.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\Platforms\NatCamAndroid.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\Platforms\NatCamBridge.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\Platforms\NatCamDeviceAndroid.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\Platforms\NatCamDeviceBridge.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\Platforms\NatCamDeviceiOS.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\Platforms\NatCamDeviceLegacy.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\Platforms\NatCamiOS.cs" />
+     <Compile Include="Assets\NatCam\Plugins\Managed\Platforms\NatCamLegacy.cs" />
+     <Compile Include="Assets\NatCorder\Examples\GreyWorld\GreyWorld.cs" />
+     <Compile Include="Assets\NatCorder\Examples\ReplayCam\CameraPreview.cs" />
+     <Compile Include="Assets\NatCorder\Examples\ReplayCam\RecordButton.cs" />
+     <Compile Include="Assets\NatCorder\Examples\ReplayCam\ReplayCam.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\Dispatch\RenderDispatch.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\INatCorder.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\IRecorder.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\NatCorder.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\NatCorderDocs.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\NatCorderTypes.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\Platforms\NatCorderAndroid.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\Platforms\NatCorderBridge.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\Platforms\NatCorderiOS.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\Platforms\NatCorderNull.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\Platforms\NatCorderOSX.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\Platforms\NatCorderWebGL.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\Platforms\NatCorderWindows.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\Recorders\AudioRecorder.cs" />
+     <Compile Include="Assets\NatCorder\Plugins\Managed\Recorders\CameraRecorder.cs" />
+     <Compile Include="Assets\NatMic\Examples\VoiceRecorder\VoiceRecorder.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\INatMic.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\NatMic.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\NatMicDocs.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\NatMicTypes.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\Platforms\NatMicAndroid.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\Platforms\NatMicBridge.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\Platforms\NatMiciOS.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\Platforms\NatMicNull.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\Platforms\NatMicOSX.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\Platforms\NatMicWindows.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\Recorders\IRecorder.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\Recorders\RecorderTypes.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\Recorders\WAVRecorder.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\Utilities\AudioMixer.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\Utilities\AudioUtility.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\Utilities\CircularBuffer.cs" />
+     <Compile Include="Assets\NatMic\Plugins\Managed\Utilities\EventUtility.cs" />
+     <Compile Include="Assets\NatShare\Plugins\Managed\INatShare.cs" />
+     <Compile Include="Assets\NatShare\Plugins\Managed\NatShare.cs" />
+     <Compile Include="Assets\NatShare\Plugins\Managed\NatShareAndroid.cs" />
+     <Compile Include="Assets\NatShare\Plugins\Managed\NatShareBridge.cs" />
+     <Compile Include="Assets\NatShare\Plugins\Managed\NatShareDocs.cs" />
+     <Compile Include="Assets\NatShare\Plugins\Managed\NatShareiOS.cs" />
+     <Compile Include="Assets\NatShare\Plugins\Managed\NatShareNull.cs" />
+     <Compile Include="Assets\NatShare\Plugins\Managed\NatShareWebGL.cs" />
      <Compile Include="Assets\Scripts\NatMicCorder.cs" />
+     <None Include="Assets\NatCorder\Resources\AspectFitter.shader" />
+     <None Include="Assets\NatCorder\Resources\Transform.shader" />
+     <None Include="Assets\NatCorder\Examples\GreyWorld\Resources\GreyWorld.shader" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>
@@ -93,6 +159,9 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>/Users/yusuf/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Dispatch">
+ <HintPath>/Users/yusuf/OneDrive/Documents/Projects/NatMicCorder-Demo/Assets/NatCorder/Plugins/Managed/Dispatch/Dispatch.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
