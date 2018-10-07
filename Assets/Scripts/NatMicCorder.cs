@@ -24,7 +24,6 @@ public class NatMicCorder : MonoBehaviour {
 
 	private void Start () {
 		// Start the camera preview with NatCam
-		// You can switch this out with WebCamTexture
 		NatCam.Play(DeviceCamera.FrontCamera ?? DeviceCamera.RearCamera);
 		NatCam.OnStart += OnPreviewStart;
 	}
