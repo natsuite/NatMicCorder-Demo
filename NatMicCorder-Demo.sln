@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatMicCorder-Demo", "Assembly-CSharp.csproj", "{E0FB3C89-709E-E4A8-D8A6-24B869B64264}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatMicCorder-Demo", "Assembly-CSharp-Editor.csproj", "{A317DBD9-A3AA-7B64-B753-5D6D77F3CC73}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +13,6 @@ Global
 		{E0FB3C89-709E-E4A8-D8A6-24B869B64264}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0FB3C89-709E-E4A8-D8A6-24B869B64264}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0FB3C89-709E-E4A8-D8A6-24B869B64264}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A317DBD9-A3AA-7B64-B753-5D6D77F3CC73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A317DBD9-A3AA-7B64-B753-5D6D77F3CC73}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A317DBD9-A3AA-7B64-B753-5D6D77F3CC73}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A317DBD9-A3AA-7B64-B753-5D6D77F3CC73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

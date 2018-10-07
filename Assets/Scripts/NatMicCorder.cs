@@ -7,10 +7,12 @@ using NatCorderU.Core.Recorders;
 using NatMicU.Core;
 using NatMicU.Core.Recorders;
 using NatCamU.Core;
+using NatShareU;
 
 public class NatMicCorder : MonoBehaviour {
 
 	#region --Op vars--
+	public bool shareRecordings;
 	public Camera recordingCamera;
 	public RawImage previewRawImage;
 	public AspectRatioFitter previewAspectFitter;
@@ -79,6 +81,9 @@ public class NatMicCorder : MonoBehaviour {
 		#elif UNITY_ANDROID
 		Handheld.PlayFullScreenMovie(path);
 		#endif
+		// Share
+		if (shareRecordings) 
+			NatShare.ShareMedia(path);
 	}
 	#endregion
 }

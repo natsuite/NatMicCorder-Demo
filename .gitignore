@@ -11,4 +11,7 @@ Assets/NatMic.meta
 Assets/NatCam/*
 !Assets/NatCam/README.md
 Assets/NatCam.meta
+Assets/NatShare/*
+!Assets/NatShare/README.md
+Assets/NatShare.meta
 recording_*
