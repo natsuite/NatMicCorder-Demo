@@ -26,8 +26,7 @@ public class NatMicCorder : MonoBehaviour {
 
 	private void Start () {
 		// Start the camera preview with NatCam
-		NatCam.Play(DeviceCamera.FrontCamera ?? DeviceCamera.RearCamera);
-		NatCam.OnStart += OnPreviewStart;
+		NatCam.StartPreview(DeviceCamera.FrontCamera ?? DeviceCamera.RearCamera, OnPreviewStart);
 	}
 	#endregion
 
