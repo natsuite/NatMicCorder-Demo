@@ -13,6 +13,7 @@ using NatShareU;
 public class NatMicCorder : MonoBehaviour {
 
 	#region --Op vars--
+	public Vector2Int recordingSize;
 	public bool shareRecordings;
 	public Camera recordingCamera;
 	public RawImage previewRawImage;
@@ -39,8 +40,9 @@ public class NatMicCorder : MonoBehaviour {
 		NatMic.StartRecording(microphoneFormat, OnSampleBuffer);
 		// Start recording
 		recordingClock = new RealtimeClock();
+        var videoFormat = new VideoFormat(recordingSize.x, recordingSize.y);
 		var audioFormat = new AudioFormat(microphoneFormat.sampleRate, microphoneFormat.channelCount);
-		NatCorder.StartRecording(Container.MP4, VideoFormat.Screen, audioFormat, OnRecording);
+		NatCorder.StartRecording(Container.MP4, videoFormat, audioFormat, OnRecording);
 		// Create a camera recorder for the main cam
 		cameraRecorder = CameraRecorder.Create(recordingCamera, recordingClock);
 	}
