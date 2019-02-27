@@ -37,7 +37,7 @@ public class NatMicCorder : MonoBehaviour {
 	public void StartRecording () {
 		// Start the microphone
 		var microphoneFormat = Format.Default;
-		NatMic.StartRecording(microphoneFormat, OnSampleBuffer);
+		NatMic.StartRecording(Device.Default, microphoneFormat, OnSampleBuffer);
 		// Start recording
 		recordingClock = new RealtimeClock();
         var videoFormat = new VideoFormat(recordingSize.x, recordingSize.y);
@@ -68,9 +68,9 @@ public class NatMicCorder : MonoBehaviour {
 	}
 
 	// Invoked by NatMic on new microphone events
-	private void OnSampleBuffer (AudioEvent audioEvent, float[] sampleBuffer, long timestamp, Format format) {
+	private void OnSampleBuffer (float[] sampleBuffer, long timestamp) {
 		// Send sample buffers directly to NatCorder for recording
-		if (audioEvent == AudioEvent.OnSampleBuffer && NatCorder.IsRecording)
+		if (NatCorder.IsRecording)
 			NatCorder.CommitSamples(sampleBuffer, recordingClock.CurrentTimestamp);
 	}
 
