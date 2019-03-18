@@ -1,13 +1,13 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using NatCorderU.Core;
-using NatCorderU.Core.Recorders;
-using NatCorderU.Core.Clocks;
+using NatCorder;
+using NatCorder.Clocks;
+using NatCorder.Inputs;
 using NatMicU.Core;
 using NatMicU.Core.Recorders;
-using NatCamU.Core;
+using NatCam;
 using NatShareU;
 
 public class NatMicCorder : MonoBehaviour {
@@ -15,11 +15,11 @@ public class NatMicCorder : MonoBehaviour {
 	#region --Op vars--
 	public Vector2Int recordingSize;
 	public bool shareRecordings;
-	public Camera recordingCamera;
 	public RawImage previewRawImage;
 	public AspectRatioFitter previewAspectFitter;
-	private CameraRecorder cameraRecorder;
-	private RealtimeClock recordingClock;
+    private MP4Recorder videoRecorder;
+    private IClock recordingClock;
+	private CameraInput cameraInput;
 	#endregion
 
 
@@ -27,7 +27,7 @@ public class NatMicCorder : MonoBehaviour {
 
 	private void Start () {
 		// Start the camera preview with NatCam
-		NatCam.StartPreview(DeviceCamera.FrontCamera ?? DeviceCamera.RearCamera, OnPreviewStart);
+        DeviceCamera.RearCamera.StartPreview(OnPreviewStart);
 	}
 	#endregion
 
@@ -38,21 +38,20 @@ public class NatMicCorder : MonoBehaviour {
 		// Start the microphone
 		var microphoneFormat = Format.Default;
 		NatMic.StartRecording(Device.Default, microphoneFormat, OnSampleBuffer);
-		// Start recording
+		// Start recording from the main camera
 		recordingClock = new RealtimeClock();
-        var videoFormat = new VideoFormat(recordingSize.x, recordingSize.y);
-		var audioFormat = new AudioFormat(microphoneFormat.sampleRate, microphoneFormat.channelCount);
-		NatCorder.StartRecording(Container.MP4, videoFormat, audioFormat, OnRecording);
-		// Create a camera recorder for the main cam
-		cameraRecorder = CameraRecorder.Create(recordingCamera, recordingClock);
+        videoRecorder = new MP4Recorder(recordingSize.x, recordingSize.y, 30, microphoneFormat.sampleRate, microphoneFormat.channelCount, OnRecording);
+		cameraInput = new CameraInput(videoRecorder, Camera.main, recordingClock);
 	}
 
 	public void StopRecording () {
 		// Stop the microphone
 		NatMic.StopRecording();
 		// Stop recording
-		cameraRecorder.Dispose();
-		NatCorder.StopRecording();
+		cameraInput.Dispose();
+		videoRecorder.Dispose();
+        cameraInput = null;
+        videoRecorder = null;
 	}
 	#endregion
 
@@ -60,21 +59,21 @@ public class NatMicCorder : MonoBehaviour {
 	#region --Callbacks--
 
 	// Invoked by NatCam once the camera preview starts
-	private void OnPreviewStart () {
+	private void OnPreviewStart (Texture preview) {
 		// Display the camera preview
-		previewRawImage.texture = NatCam.Preview;
+		previewRawImage.texture = preview;
 		// Scale the panel to match aspect ratios
-        previewAspectFitter.aspectRatio = NatCam.Preview.width / (float)NatCam.Preview.height;
+        previewAspectFitter.aspectRatio = preview.width / (float)preview.height;
 	}
 
-	// Invoked by NatMic on new microphone events
+	// Invoked by NatMic on new microphone audio data
 	private void OnSampleBuffer (float[] sampleBuffer, long timestamp) {
-		// Send sample buffers directly to NatCorder for recording
-		if (NatCorder.IsRecording)
-			NatCorder.CommitSamples(sampleBuffer, recordingClock.CurrentTimestamp);
+		// Send sample buffers directly to the video recorder for recording
+		if (videoRecorder != null)
+			videoRecorder.CommitSamples(sampleBuffer, recordingClock.Timestamp);
 	}
 
-	// Invoked by NatCorder once video recording is complete
+	// Invoked by video recorder once video recording is complete
 	private void OnRecording (string path) {
 		// Share
 		if (shareRecordings) 
