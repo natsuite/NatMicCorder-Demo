@@ -35,15 +35,15 @@ public class NatMicCorder : MonoBehaviour, IAudioProcessor {
 	#region --Recording--
 
 	public void StartRecording () {
-		// Start the microphone
 		var sampleRate = 44100;
 		var channelCount = 2;
-		audioDevice = AudioDevice.Devices[0];
-		audioDevice.StartRecording(sampleRate, channelCount, this);
-		// Start recording from the main camera
+        // Start recording from the main camera
 		recordingClock = new RealtimeClock();
         videoRecorder = new MP4Recorder(videoWidth, videoHeight, 30, sampleRate, channelCount, OnRecording);
 		cameraInput = new CameraInput(videoRecorder, recordingClock, Camera.main);
+        // Start the microphone
+		audioDevice = AudioDevice.Devices[0];
+		audioDevice.StartRecording(sampleRate, channelCount, this);
 	}
 
 	public void StopRecording () {
