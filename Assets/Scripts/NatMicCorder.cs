@@ -36,7 +36,7 @@ public class NatMicCorder : MonoBehaviour, IAudioProcessor {
 
 	public void StartRecording () {
 		var sampleRate = 44100;
-		var channelCount = 2;
+		var channelCount = 1;
         // Start recording from the main camera
 		recordingClock = new RealtimeClock();
         videoRecorder = new MP4Recorder(videoWidth, videoHeight, 30, sampleRate, channelCount, OnRecording);
