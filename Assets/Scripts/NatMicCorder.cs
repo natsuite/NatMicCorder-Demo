@@ -42,7 +42,7 @@ public class NatMicCorder : MonoBehaviour, IAudioProcessor {
         videoRecorder = new MP4Recorder(videoWidth, videoHeight, 30, sampleRate, channelCount, OnRecording);
 		cameraInput = new CameraInput(videoRecorder, recordingClock, Camera.main);
         // Start the microphone
-		audioDevice = AudioDevice.Devices[0];
+		audioDevice = AudioDevice.GetDevices()[0];
 		audioDevice.StartRecording(sampleRate, channelCount, this);
 	}
 
