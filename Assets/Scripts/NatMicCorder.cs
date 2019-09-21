@@ -21,8 +21,8 @@ public class NatMicCorder : MonoBehaviour, IAudioProcessor {
 	public bool shareRecordings;
 
 	[Header("UI")]
-	public RawImage previewRawImage;
-	public AspectRatioFitter previewAspectFitter;
+	public RawImage rawImage;
+	public AspectRatioFitter aspectFitter;
 
     private MP4Recorder videoRecorder;
     private RealtimeClock recordingClock;
@@ -63,15 +63,11 @@ public class NatMicCorder : MonoBehaviour, IAudioProcessor {
 	// Invoked by Unity when the scene opens
 	private void Start () {
 		// Start the camera preview with NatCam
-        DeviceCamera.RearCamera.StartPreview(OnPreviewStart);
-	}
-
-	// Invoked by NatCam device camera once the camera preview starts
-	private void OnPreviewStart (Texture preview) {
-		// Display the camera preview
-		previewRawImage.texture = preview;
-		// Scale the panel to match aspect ratios
-        previewAspectFitter.aspectRatio = preview.width / (float)preview.height;
+        var cameraDevice = CameraDevice.GetDevices()[0];
+        cameraDevice.StartPreview(previewTexture => {
+            rawImage.texture = previewTexture;
+            aspectFitter.aspectRatio = preview.width / (float)preview.height;
+        });
 	}
 
 	// Invoked by NatMic audio device with new audio sample buffer
