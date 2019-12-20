@@ -6,8 +6,8 @@ NatMicCorder is a minimal project illustrating NatMic and NatCorder API integrat
 - [NatShare API](https://assetstore.unity.com/packages/tools/integration/natshare-mobile-sharing-api-117705) is used for social sharing
 
 ## Requirements
-- Unity 2017+
-- NatCorder 1.3+
-- NatCam 2.0+
-- NatMic 1.0+
-- NatShare 1.1+
+- Unity 2018.3+
+- NatCorder 1.5+
+- NatCam 2.3+
+- NatMic 1.3+
+- NatShare 1.2+
