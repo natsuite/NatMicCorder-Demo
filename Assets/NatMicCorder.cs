@@ -7,7 +7,7 @@ using NatCorder.Clocks;
 using NatCorder.Inputs;
 using NatMic;
 using NatCam;
-using NatShareU;
+using NatShare;
 
 public class NatMicCorder : MonoBehaviour, IAudioProcessor {
 
@@ -18,7 +18,7 @@ public class NatMicCorder : MonoBehaviour, IAudioProcessor {
     public int videoHeight = 720;
 
     [Header("Sharing")]
-    public bool shareRecordings;
+    public bool shareRecording;
 
     [Header("UI")]
     public RawImage rawImage;
@@ -78,20 +78,13 @@ public class NatMicCorder : MonoBehaviour, IAudioProcessor {
 
     // Invoked by NatCorder video recorder once video recording is complete
     private void OnRecording (string path) {
-        Debug.Log("Recording saved to path: "+path);
-        // Share
-        if (shareRecordings)
-            NatShare.Share(path);
-        // Playback the recording
-        else {
-            #if UNITY_EDITOR
-            UnityEditor.EditorUtility.OpenWithDefaultApp(path);
-            #elif UNITY_IOS
-            Handheld.PlayFullScreenMovie("file://" + path);
-            #elif UNITY_ANDROID
-            Handheld.PlayFullScreenMovie(path);
-            #endif
-        }
+        Debug.Log($"Saved recording to: {path}");
+        var prefix = Application.platform == RuntimePlatform.IPhonePlayer ? "file://" : "";
+        if (shareRecording)
+            using (var payload = new SharePayload())
+                payload.AddMedia(path);
+        else
+            Handheld.PlayFullScreenMovie($"{prefix}{recordingPath}");
     }
     #endregion
 }
