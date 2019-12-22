@@ -84,7 +84,7 @@ public class NatMicCorder : MonoBehaviour, IAudioProcessor {
             using (var payload = new SharePayload())
                 payload.AddMedia(path);
         else
-            Handheld.PlayFullScreenMovie($"{prefix}{recordingPath}");
+            Handheld.PlayFullScreenMovie($"{prefix}{path}");
     }
     #endregion
 }
