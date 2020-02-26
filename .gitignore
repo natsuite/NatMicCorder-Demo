@@ -1,17 +1,28 @@
+# Unity
 Library/
 Temp/
-.vscode/
 obj/
+
+# IDE
+.vscode/
+.gradle/
+.vs/
+
+# NatCorder
 Assets/NatCorder/*
 !Assets/NatCorder/README.md
 Assets/NatCorder.meta
-Assets/NatMic/*
-!Assets/NatMic/README.md
-Assets/NatMic.meta
-Assets/NatCam/*
-!Assets/NatCam/README.md
-Assets/NatCam.meta
+recording_*
+
+# NatDevice
+Assets/NatDevice/*
+!Assets/NatDevice/README.md
+Assets/NatDevice.meta
+
+# NatShare
 Assets/NatShare/*
 !Assets/NatShare/README.md
 Assets/NatShare.meta
-recording_*
+
+# Misc
+.DS_Store

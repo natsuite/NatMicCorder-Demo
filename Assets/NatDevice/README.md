@@ -1,0 +1,1 @@
+[NatDevice](https://assetstore.unity.com/packages/tools/integration/natdevice-media-device-api-162053) is not included in this repository due to license.
