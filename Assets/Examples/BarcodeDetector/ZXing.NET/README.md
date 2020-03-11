@@ -1,0 +1,1 @@
+[Get ZXing.NET](https://github.com/micjahn/ZXing.Net/releases) from GitHub and place the DLL in this directory.

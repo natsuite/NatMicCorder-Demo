@@ -24,5 +24,10 @@ Assets/NatShare/*
 !Assets/NatShare/README.md
 Assets/NatShare.meta
 
+# External libraries
+Assets/Examples/BarcodeDetector/ZXing.NET/*
+!Assets/Examples/BarcodeDetector/ZXing.NET/README.md
+Assets/Examples/BarcodeDetector/ZXing.NET.meta
+
 # Misc
 .DS_Store

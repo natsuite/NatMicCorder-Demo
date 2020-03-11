@@ -45,11 +45,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\NatCorder\Examples\Giffy\Giffy.cs" />
-     <Compile Include="Assets\NatCorder\Examples\ReplayCam\CameraPreview.cs" />
-     <Compile Include="Assets\NatCorder\Examples\ReplayCam\RecordButton.cs" />
-     <Compile Include="Assets\NatCorder\Examples\ReplayCam\ReplayCam.cs" />
-     <Compile Include="Assets\NatCorder\Examples\WebCam\WebCam.cs" />
+     <Compile Include="Assets\Examples\BarcodeDetector\BarcodeDetector.cs" />
+     <Compile Include="Assets\Examples\HotMic\Components\ClipRecorder.cs" />
+     <Compile Include="Assets\Examples\HotMic\Components\RecordButton.cs" />
+     <Compile Include="Assets\Examples\HotMic\HotMic.cs" />
+     <Compile Include="Assets\Examples\MiniCam\MiniCam.cs" />
+     <Compile Include="Assets\Examples\ReplayCam\ReplayCam.cs" />
      <Compile Include="Assets\NatCorder\Plugins\Managed\Clocks\FixedIntervalClock.cs" />
      <Compile Include="Assets\NatCorder\Plugins\Managed\Clocks\IClock.cs" />
      <Compile Include="Assets\NatCorder\Plugins\Managed\Clocks\RealtimeClock.cs" />
@@ -65,18 +66,16 @@
      <Compile Include="Assets\NatCorder\Plugins\Managed\JPGRecorder.cs" />
      <Compile Include="Assets\NatCorder\Plugins\Managed\MP4Recorder.cs" />
      <Compile Include="Assets\NatCorder\Plugins\Managed\WAVRecorder.cs" />
-     <Compile Include="Assets\NatDevice\Examples\HotMic\ClipRecorder.cs" />
-     <Compile Include="Assets\NatDevice\Examples\HotMic\HotMic.cs" />
-     <Compile Include="Assets\NatDevice\Examples\HotMic\UI\RecordButton.cs" />
-     <Compile Include="Assets\NatDevice\Examples\MiniCam\MiniCam.cs" />
      <Compile Include="Assets\NatDevice\Plugins\Managed\AudioDevice.cs" />
      <Compile Include="Assets\NatDevice\Plugins\Managed\CameraDevice.cs" />
+     <Compile Include="Assets\NatDevice\Plugins\Managed\CameraDeviceTypes.cs" />
      <Compile Include="Assets\NatDevice\Plugins\Managed\IMediaDevice.cs" />
      <Compile Include="Assets\NatDevice\Plugins\Managed\Internal\Bridge.cs" />
      <Compile Include="Assets\NatDevice\Plugins\Managed\Internal\Docs.cs" />
      <Compile Include="Assets\NatDevice\Plugins\Managed\Internal\NativeAudioDevice.cs" />
      <Compile Include="Assets\NatDevice\Plugins\Managed\Internal\NativeCameraDevice.cs" />
      <Compile Include="Assets\NatDevice\Plugins\Managed\MediaDeviceCriteria.cs" />
+     <Compile Include="Assets\NatDevice\Plugins\Managed\MediaDevicePermissions.cs" />
      <Compile Include="Assets\NatDevice\Plugins\Managed\MediaDeviceQuery.cs" />
      <Compile Include="Assets\NatDevice\Plugins\Managed\MixerDevice.cs" />
      <Compile Include="Assets\NatDevice\Plugins\Managed\WebCameraDevice.cs" />
@@ -88,8 +87,8 @@
      <Compile Include="Assets\NatShare\Plugins\Managed\PrintPayload.cs" />
      <Compile Include="Assets\NatShare\Plugins\Managed\SavePayload.cs" />
      <Compile Include="Assets\NatShare\Plugins\Managed\SharePayload.cs" />
-     <Compile Include="Assets\NatSuiteDemo.cs" />
-     <None Include="Assets\NatCorder\Examples\ReplayCam\UI\Resources\CameraPreview.shader" />
+     <None Include="Assets\Examples\BarcodeDetector\ZXing.NET\zxing.unity.xml" />
+     <None Include="Assets\Examples\ReplayCam\UI\Resources\CameraPreview.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/yusuf/Documents/Projects/NatSuite-Examples/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -332,6 +331,9 @@
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
  <HintPath>/Users/yusuf/Documents/Projects/NatSuite-Examples/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="zxing.unity">
+ <HintPath>/Users/yusuf/Documents/Projects/NatSuite-Examples/Assets/Examples/BarcodeDetector/ZXing.NET/zxing.unity.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
