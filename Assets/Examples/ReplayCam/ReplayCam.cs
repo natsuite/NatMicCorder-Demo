@@ -43,18 +43,13 @@ namespace NatSuite.Examples {
         }
 
         public void StartRecording () {
-            // If we are recording the microphone, then stream audio samples from the mic to the recorder
-            if (recordMicrophone) {
-                var clock = new RealtimeClock();
-                recorder = new MP4Recorder(videoWidth, videoHeight, 30, audioDevice.sampleRate, audioDevice.channelCount);
-                cameraInput = new CameraInput(recorder, clock, Camera.main);
-                audioDevice.StartRunning((sampleBuffer, timestamp) => recorder.CommitSamples(sampleBuffer, clock.timestamp));
-            }
-            // Else only record video from the game camera
-            else {
-                recorder = new MP4Recorder(videoWidth, videoHeight, 30);
-                cameraInput = new CameraInput(recorder, new RealtimeClock(), Camera.main);
-            }
+            // Create recorder
+            var microphone = recordMicrophone ? audioDevice : null;
+            var clock = new RealtimeClock();
+            recorder = new MP4Recorder(videoWidth, videoHeight, 30, microphone?.sampleRate ?? 0, microphone?.channelCount ?? 0);
+            // Stream media samples to the recorder
+            cameraInput = new CameraInput(recorder, clock, Camera.main);
+            microphone?.StartRunning((sampleBuffer, timestamp) => recorder.CommitSamples(sampleBuffer, clock.timestamp));
         }
 
         public async void StopRecording () {
