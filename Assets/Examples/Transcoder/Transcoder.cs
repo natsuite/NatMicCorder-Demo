@@ -8,7 +8,6 @@ namespace NatSuite.Examples {
     using UnityEngine;
     using Readers;
     using Recorders;
-    using Recorders.Clocks;
 
     public class Transcoder : MonoBehaviour {
 
