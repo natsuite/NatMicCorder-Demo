@@ -51,6 +51,7 @@
      <Compile Include="Assets\Examples\HotMic\HotMic.cs" />
      <Compile Include="Assets\Examples\MiniCam\MiniCam.cs" />
      <Compile Include="Assets\Examples\ReplayCam\ReplayCam.cs" />
+     <Compile Include="Assets\Examples\Transcoder\Transcoder.cs" />
      <Compile Include="Assets\NatCorder\Plugins\Managed\Clocks\FixedIntervalClock.cs" />
      <Compile Include="Assets\NatCorder\Plugins\Managed\Clocks\IClock.cs" />
      <Compile Include="Assets\NatCorder\Plugins\Managed\Clocks\RealtimeClock.cs" />
@@ -79,6 +80,11 @@
      <Compile Include="Assets\NatDevice\Plugins\Managed\MediaDeviceQuery.cs" />
      <Compile Include="Assets\NatDevice\Plugins\Managed\MixerDevice.cs" />
      <Compile Include="Assets\NatDevice\Plugins\Managed\WebCameraDevice.cs" />
+     <Compile Include="Assets\NatReader\Examples\Playback\Playback.cs" />
+     <Compile Include="Assets\NatReader\Plugins\Managed\IMediaReader.cs" />
+     <Compile Include="Assets\NatReader\Plugins\Managed\Internal\Bridge.cs" />
+     <Compile Include="Assets\NatReader\Plugins\Managed\Internal\Docs.cs" />
+     <Compile Include="Assets\NatReader\Plugins\Managed\MP4FrameReader.cs" />
      <Compile Include="Assets\NatShare\Plugins\Managed\Internal\AndroidPayload.cs" />
      <Compile Include="Assets\NatShare\Plugins\Managed\Internal\Bridge.cs" />
      <Compile Include="Assets\NatShare\Plugins\Managed\Internal\Docs.cs" />
@@ -323,6 +329,9 @@
  <Reference Include="UnityEditor">
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
  </Reference>
+ <Reference Include="zxing.unity">
+ <HintPath>/Users/yusuf/Documents/Projects/NatSuite-Examples/Assets/Examples/BarcodeDetector/ZXing.NET/zxing.unity.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>/Users/yusuf/Documents/Projects/NatSuite-Examples/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
@@ -331,9 +340,6 @@
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
  <HintPath>/Users/yusuf/Documents/Projects/NatSuite-Examples/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="zxing.unity">
- <HintPath>/Users/yusuf/Documents/Projects/NatSuite-Examples/Assets/Examples/BarcodeDetector/ZXing.NET/zxing.unity.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

@@ -19,6 +19,11 @@ Assets/NatDevice/*
 !Assets/NatDevice/README.md
 Assets/NatDevice.meta
 
+# NatReader
+Assets/NatReader/*
+!Assets/NatReader/README.md
+Assets/NatReader.meta
+
 # NatShare
 Assets/NatShare/*
 !Assets/NatShare/README.md
