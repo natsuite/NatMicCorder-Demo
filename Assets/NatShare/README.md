@@ -1,1 +1,0 @@
-[NatShare](https://github.com/natsuite/NatShare-API) is available on GitHub.

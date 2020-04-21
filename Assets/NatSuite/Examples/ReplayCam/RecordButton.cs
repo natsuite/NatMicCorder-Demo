@@ -3,9 +3,9 @@
 *   Copyright (c) 2020 Yusuf Olokoba.
 */
 
-namespace NatSuite.Examples.Components {
+namespace NatSuite.Components.UI {
 
-	using System.Collections;
+	using System.Threading.Tasks;
 	using UnityEngine;
 	using UnityEngine.UI;
 	using UnityEngine.Events;
@@ -14,52 +14,49 @@ namespace NatSuite.Examples.Components {
 	[RequireComponent(typeof(EventTrigger))]
 	public class RecordButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 
-		public Image button, countdown;
-		public UnityEvent onTouchDown, onTouchUp;
+		[Header(@"UI")]
+		public Image button;
+		public Image countdown;
+
+		[Header(@"Behaviour"), Range(5, 15)]
+		public float maxRecordingTime = 10f;
+
+		[Header(@"Event Triggers")]
+		public UnityEvent onTouchDown;
+		public UnityEvent onTouchUp;
+		
 		private bool pressed;
 		private const float MaxRecordingTime = 10f; // seconds
 
-		private void Start () {
-			Reset();
-		}
+		void Start () => Reset();
 
-		private void Reset () {
-			// Reset fill amounts
+		void Reset () {
 			if (button)
 				button.fillAmount = 1.0f;
 			if (countdown)
 				countdown.fillAmount = 0.0f;
 		}
 
-		void IPointerDownHandler.OnPointerDown (PointerEventData eventData) {
-			// Start counting
-			StartCoroutine(Countdown());
-		}
-
-		void IPointerUpHandler.OnPointerUp (PointerEventData eventData) {
-			// Reset pressed
-			pressed = false;
-		}
-
-		private IEnumerator Countdown () {
+		async void IPointerDownHandler.OnPointerDown (PointerEventData eventData) {
+			// Check for false touch
 			pressed = true;
-			// First wait a short time to make sure it's not a tap
-			yield return new WaitForSeconds(0.2f);
+			await Task.Delay(200);
 			if (!pressed)
-				yield break;
-			// Start recording
+				return;
 			onTouchDown?.Invoke();
-			// Animate the countdown
+			// Countdown
 			float startTime = Time.time, ratio = 0f;
 			while (pressed && (ratio = (Time.time - startTime) / MaxRecordingTime) < 1.0f) {
 				countdown.fillAmount = ratio;
 				button.fillAmount = 1f - ratio;
-				yield return null;
+				await Task.Delay(1);
 			}
 			// Reset
 			Reset();
 			// Stop recording
 			onTouchUp?.Invoke();
 		}
+
+		void IPointerUpHandler.OnPointerUp (PointerEventData eventData) => pressed = false;
 	}
 }

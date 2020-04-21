@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2019_2_17;UNITY_2019_2;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_RUNTIME_GI;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_IOS_NATIVE_CRASH_REPORTING;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;ENABLE_ENGINE_CODE_STRIPPING;PLATFORM_HAS_NO_SUPPORT_FOR_BUCKET_ALLOCATOR;STRICTCPP_NEW_DELETE_SIGNATURES;HAS_NEON_SKINNING;UNITY_GFX_USE_PLATFORM_VSYNC;UNITY_INPUT_SIMULATE_EVENTS;PLATFORM_ALWAYS_USES_STDOUT_FOR_LOG;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_ASTC_ONLY_DECOMPRESS;ENABLE_ONSCREEN_KEYBOARD;SUPPORTS_GRANULAR_MODULE_REGISTRATION;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;PLATFORM_IOS;UNITY_IOS;PLATFORM_IPHONE;UNITY_IPHONE;UNITY_IPHONE_API;SUPPORT_MULTIPLE_DISPLAYS;ENABLE_VR;ENABLE_AR;UNITY_HAS_GOOGLEVR;ENABLE_SPATIALTRACKING;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_2_17;UNITY_2019_2;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_EVENT_QUEUE;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_AR;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;UNITY_ASTC_ONLY_DECOMPRESS;ANDROID_USE_SWAPPY;ENABLE_ONSCREEN_KEYBOARD;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -45,56 +45,51 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Examples\BarcodeDetector\BarcodeDetector.cs" />
-     <Compile Include="Assets\Examples\HotMic\Components\ClipRecorder.cs" />
-     <Compile Include="Assets\Examples\HotMic\Components\RecordButton.cs" />
-     <Compile Include="Assets\Examples\HotMic\HotMic.cs" />
-     <Compile Include="Assets\Examples\MiniCam\MiniCam.cs" />
-     <Compile Include="Assets\Examples\ReplayCam\ReplayCam.cs" />
-     <Compile Include="Assets\Examples\Transcoder\Transcoder.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\Clocks\FixedIntervalClock.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\Clocks\IClock.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\Clocks\RealtimeClock.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\GIFRecorder.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\HEVCRecorder.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\IMediaRecorder.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\Inputs\AudioInput.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\Inputs\CameraInput.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\Inputs\WebCamTextureInput.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\Internal\Bridge.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\Internal\NativeRecorder.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\Internal\Utility.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\JPGRecorder.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\MP4Recorder.cs" />
-     <Compile Include="Assets\NatCorder\Plugins\Managed\WAVRecorder.cs" />
-     <Compile Include="Assets\NatDevice\Plugins\Managed\AudioDevice.cs" />
-     <Compile Include="Assets\NatDevice\Plugins\Managed\CameraDevice.cs" />
-     <Compile Include="Assets\NatDevice\Plugins\Managed\CameraDeviceTypes.cs" />
-     <Compile Include="Assets\NatDevice\Plugins\Managed\IMediaDevice.cs" />
-     <Compile Include="Assets\NatDevice\Plugins\Managed\Internal\Bridge.cs" />
-     <Compile Include="Assets\NatDevice\Plugins\Managed\Internal\Docs.cs" />
-     <Compile Include="Assets\NatDevice\Plugins\Managed\Internal\NativeAudioDevice.cs" />
-     <Compile Include="Assets\NatDevice\Plugins\Managed\Internal\NativeCameraDevice.cs" />
-     <Compile Include="Assets\NatDevice\Plugins\Managed\MediaDeviceCriteria.cs" />
-     <Compile Include="Assets\NatDevice\Plugins\Managed\MediaDevicePermissions.cs" />
-     <Compile Include="Assets\NatDevice\Plugins\Managed\MediaDeviceQuery.cs" />
-     <Compile Include="Assets\NatDevice\Plugins\Managed\MixerDevice.cs" />
-     <Compile Include="Assets\NatDevice\Plugins\Managed\WebCameraDevice.cs" />
-     <Compile Include="Assets\NatReader\Examples\Playback\Playback.cs" />
-     <Compile Include="Assets\NatReader\Plugins\Managed\IMediaReader.cs" />
-     <Compile Include="Assets\NatReader\Plugins\Managed\Internal\Bridge.cs" />
-     <Compile Include="Assets\NatReader\Plugins\Managed\Internal\Docs.cs" />
-     <Compile Include="Assets\NatReader\Plugins\Managed\MP4FrameReader.cs" />
-     <Compile Include="Assets\NatShare\Plugins\Managed\Internal\AndroidPayload.cs" />
-     <Compile Include="Assets\NatShare\Plugins\Managed\Internal\Bridge.cs" />
-     <Compile Include="Assets\NatShare\Plugins\Managed\Internal\Docs.cs" />
-     <Compile Include="Assets\NatShare\Plugins\Managed\Internal\NativePayload.cs" />
-     <Compile Include="Assets\NatShare\Plugins\Managed\ISharePayload.cs" />
-     <Compile Include="Assets\NatShare\Plugins\Managed\PrintPayload.cs" />
-     <Compile Include="Assets\NatShare\Plugins\Managed\SavePayload.cs" />
-     <Compile Include="Assets\NatShare\Plugins\Managed\SharePayload.cs" />
-     <None Include="Assets\Examples\BarcodeDetector\ZXing.NET\zxing.unity.xml" />
-     <None Include="Assets\Examples\ReplayCam\UI\Resources\CameraPreview.shader" />
+     <Compile Include="Assets\NatSuite\Examples\BarcodeDetector\BarcodeDetector.cs" />
+     <Compile Include="Assets\NatSuite\Examples\HotMic\ClipRecorder.cs" />
+     <Compile Include="Assets\NatSuite\Examples\HotMic\HotMic.cs" />
+     <Compile Include="Assets\NatSuite\Examples\MiniCam\MiniCam.cs" />
+     <Compile Include="Assets\NatSuite\Examples\ReplayCam\RecordButton.cs" />
+     <Compile Include="Assets\NatSuite\Examples\ReplayCam\ReplayCam.cs" />
+     <Compile Include="Assets\NatSuite\Examples\Transcoder\Transcoder.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Devices\AudioDevice.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Devices\CameraDevice.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Devices\CameraDeviceTypes.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Devices\IMediaDevice.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Devices\Internal\Bridge.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Devices\Internal\NativeAudioDevice.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Devices\Internal\NativeCameraDevice.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Devices\MediaDeviceCriteria.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Devices\MediaDevicePermissions.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Devices\MediaDeviceQuery.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Devices\MixerDevice.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Devices\WebCameraDevice.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Readers\IMediaReader.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Readers\Internal\Bridge.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Readers\MP4FrameReader.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\Clocks\FixedIntervalClock.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\Clocks\IClock.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\Clocks\RealtimeClock.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\GIFRecorder.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\HEVCRecorder.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\IMediaRecorder.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\Inputs\AudioInput.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\Inputs\CameraInput.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\Internal\Bridge.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\Internal\NativeRecorder.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\Internal\Utility.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\JPGRecorder.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\MP4Recorder.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Recorders\WAVRecorder.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Sharing\Internal\AndroidPayload.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Sharing\Internal\Bridge.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Sharing\Internal\Docs.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Sharing\Internal\NativePayload.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Sharing\ISharePayload.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Sharing\PrintPayload.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Sharing\SavePayload.cs" />
+     <Compile Include="Assets\NatSuite\Plugins\Managed\Sharing\SharePayload.cs" />
+     <None Include="Assets\NatSuite\Examples\BarcodeDetector\ZXing.NET\zxing.unity.xml" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/yusuf/Documents/Projects/NatSuite-Examples/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -330,7 +325,7 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="zxing.unity">
- <HintPath>/Users/yusuf/Documents/Projects/NatSuite-Examples/Assets/Examples/BarcodeDetector/ZXing.NET/zxing.unity.dll</HintPath>
+ <HintPath>/Users/yusuf/Documents/Projects/NatSuite-Examples/Assets/NatSuite/Examples/BarcodeDetector/ZXing.NET/zxing.unity.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>/Users/yusuf/Documents/Projects/NatSuite-Examples/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>

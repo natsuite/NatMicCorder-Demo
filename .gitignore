@@ -8,31 +8,17 @@ obj/
 .gradle/
 .vs/
 
-# NatCorder
-Assets/NatCorder/*
-!Assets/NatCorder/README.md
-Assets/NatCorder.meta
-recording_*
-
-# NatDevice
-Assets/NatDevice/*
-!Assets/NatDevice/README.md
-Assets/NatDevice.meta
-
-# NatReader
-Assets/NatReader/*
-!Assets/NatReader/README.md
-Assets/NatReader.meta
-
-# NatShare
-Assets/NatShare/*
-!Assets/NatShare/README.md
-Assets/NatShare.meta
+# NatSuite API's
+Assets/NatSuite/Plugins
+Assets/NatSuite/Plugins.meta
 
 # External libraries
-Assets/Examples/BarcodeDetector/ZXing.NET/*
-!Assets/Examples/BarcodeDetector/ZXing.NET/README.md
-Assets/Examples/BarcodeDetector/ZXing.NET.meta
+Assets/NatSuite/Examples/BarcodeDetector/ZXing.NET/*
+!Assets/NatSuite/Examples/BarcodeDetector/ZXing.NET/README.md
+Assets/NatSuite/Examples/BarcodeDetector/ZXing.NET.meta
+
+# Recordings
+recording_*
 
 # Misc
 .DS_Store
