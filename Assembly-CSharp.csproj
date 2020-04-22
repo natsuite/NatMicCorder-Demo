@@ -46,7 +46,6 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\NatSuite\Examples\BarcodeDetector\BarcodeDetector.cs" />
-     <Compile Include="Assets\NatSuite\Examples\HotMic\ClipRecorder.cs" />
      <Compile Include="Assets\NatSuite\Examples\HotMic\HotMic.cs" />
      <Compile Include="Assets\NatSuite\Examples\MiniCam\MiniCam.cs" />
      <Compile Include="Assets\NatSuite\Examples\ReplayCam\RecordButton.cs" />

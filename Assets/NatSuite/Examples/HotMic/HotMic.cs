@@ -6,13 +6,13 @@
 namespace NatSuite.Examples {
 
     using UnityEngine;
-    using Components;
     using Devices;
+    using Recorders;
 
     public class HotMic : MonoBehaviour {
 
         IAudioDevice device;
-        ClipRecorder recorder;
+        WAVRecorder recorder;
 
         async void Start () {
             // Request mic permissions
@@ -29,17 +29,18 @@ namespace NatSuite.Examples {
         public void StartRecording () {
             // Create a recorder
             Debug.Log($"Starting recording with format: {device.sampleRate}Hz with channel count {device.channelCount}");
-            recorder = new ClipRecorder(device.sampleRate, device.channelCount);
+            recorder = new WAVRecorder(device.sampleRate, device.channelCount);
             // Start streaming audio samples to the recorder
             device.StartRunning(recorder.CommitSamples);
         }
 
-        public void StopRecording () {
+        public async void StopRecording () {
             // Stop recording
             device.StopRunning();
-            var audioClip = recorder.FinishWriting();
+            var path = await recorder.FinishWriting();
             // Playback the recording
-            AudioSource.PlayClipAtPoint(audioClip, Vector3.zero);
+            Debug.Log($"Recorded audio to path: {path}");
+            Handheld.PlayFullScreenMovie($"file://{path}");
         }
     }
 }
