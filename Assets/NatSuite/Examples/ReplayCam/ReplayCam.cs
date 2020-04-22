@@ -32,7 +32,7 @@ namespace NatSuite.Examples {
             var micQuery = new MediaDeviceQuery(MediaDeviceQuery.Criteria.AudioDevice);
             audioDevice = micQuery.currentDevice as IAudioDevice;
             // Get rear camera
-            var query = new MediaDeviceQuery(MediaDeviceQuery.Criteria.RearFacing);
+            var query = new MediaDeviceQuery(MediaDeviceQuery.Criteria.GenericCameraDevice);
             var device = query.currentDevice as ICameraDevice;
             // Start the camera preview
             device.previewResolution = (1280, 720);
@@ -61,12 +61,7 @@ namespace NatSuite.Examples {
             var recordingPath = await recorder.FinishWriting();
             Debug.Log($"Saved recording to: {recordingPath}");
             // Playback recording
-            if (Application.platform == RuntimePlatform.Android)
-                Handheld.PlayFullScreenMovie(recordingPath);
-            else if (Application.platform == RuntimePlatform.IPhonePlayer)
-                Handheld.PlayFullScreenMovie($"file://{recordingPath}");
-            else
-                Application.OpenURL(recordingPath); // DEPLOY // Editor
+            Handheld.PlayFullScreenMovie($"file://{recordingPath}");
         }
     }
 }
