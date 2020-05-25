@@ -1,1 +1,0 @@
-[NatShare](https://assetstore.unity.com/packages/tools/integration/natshare-mobile-sharing-api-117705) is available for free on the Asset Store.

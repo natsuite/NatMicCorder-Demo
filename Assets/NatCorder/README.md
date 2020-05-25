@@ -1,1 +1,0 @@
-[NatCorder](https://assetstore.unity.com/packages/tools/integration/natcorder-video-recording-api-102645) is not included in this repository due to license.
