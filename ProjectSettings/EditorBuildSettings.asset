@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/NatSuite/Examples/ReplayCam/ReplayCam.unity
     guid: 031ff69c019634f3db2a359ea42bceb4
   - enabled: 0
     path: Assets/NatSuite/Examples/Transcoder/Transcoder.unity
     guid: 178d7fbc1c1944917a0e4e89d9367a04
+  - enabled: 1
+    path: Assets/NatSuite/Examples/BarcodeDetector/BarcodeDetector.unity
+    guid: 16cdc94ef1c094e8db295bcc311bb518
   m_configObjects: {}

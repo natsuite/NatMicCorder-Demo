@@ -28,6 +28,15 @@ namespace NatSuite.Examples {
         private IAudioDevice audioDevice; // Used to record microphone
 
         async void Start () {
+            // Request permissions
+            if (!await MediaDeviceQuery.RequestPermissions<CameraDevice>()) {
+                Debug.LogError("User did not grant camera permissions");
+                return;
+            }
+            if (!await MediaDeviceQuery.RequestPermissions<AudioDevice>()) {
+                Debug.LogError("User did not grant microphone permissions");
+                return;
+            }
             // Get a microphone
             var micQuery = new MediaDeviceQuery(MediaDeviceQuery.Criteria.AudioDevice);
             audioDevice = micQuery.currentDevice as IAudioDevice;
@@ -45,6 +54,7 @@ namespace NatSuite.Examples {
         public void StartRecording () {
             // Create recorder
             var microphone = recordMicrophone ? audioDevice : null;
+            Debug.Log($"Sample rate: {microphone.sampleRate} Channel count: {microphone.channelCount}");
             var clock = new RealtimeClock();
             recorder = new MP4Recorder(videoWidth, videoHeight, 30, microphone?.sampleRate ?? 0, microphone?.channelCount ?? 0);
             // Stream media samples to the recorder
