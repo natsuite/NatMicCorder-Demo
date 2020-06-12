@@ -26,7 +26,7 @@ namespace NatSuite.Examples {
             var query = new MediaDeviceQuery(MediaDeviceQuery.Criteria.RearFacing);
             var device = query.currentDevice as ICameraDevice;
             // Start the camera preview
-            device.previewResolution = (1280, 720);
+            device.previewResolution = (640, 480);
             previewTexture = await device.StartRunning();
             pixelBuffer = previewTexture.GetPixels32();
             // Display preview

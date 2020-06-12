@@ -4,43 +4,43 @@
 */
 
 namespace NatSuite.Examples {
-
+    
     using UnityEngine;
     using Devices;
-    using Recorders;
+    using Components;
 
     public class HotMic : MonoBehaviour {
-
+        
         IAudioDevice device;
-        WAVRecorder recorder;
-
+        ClipRecorder recorder;
+        
         async void Start () {
             // Request mic permissions
             if (!await MediaDeviceQuery.RequestPermissions<AudioDevice>()) {
                 Debug.LogError("User did not grant microphone permissions");
                 return;
             }
-            // Get a microphone
+            // Create a media device query for audio devices
             var deviceQuery = new MediaDeviceQuery(MediaDeviceQuery.Criteria.AudioDevice);
-            device = deviceQuery.currentDevice as IAudioDevice;
+            // Get the device
+            device = deviceQuery.currentDevice as AudioDevice;
             Debug.Log($"{device}");
         }
 
         public void StartRecording () {
             // Create a recorder
-            Debug.Log($"Starting recording with format: {device.sampleRate}Hz with channel count {device.channelCount}");
-            recorder = new WAVRecorder(device.sampleRate, device.channelCount);
-            // Start streaming audio samples to the recorder
+            Debug.Log($"Starting recording with format:  {device.channelCount} channel @ {device.sampleRate}Hz");
+            recorder = new ClipRecorder(device.sampleRate, device.channelCount);
+            // Start recording
             device.StartRunning(recorder.CommitSamples);
         }
 
-        public async void StopRecording () {
+        public void StopRecording () {
             // Stop recording
             device.StopRunning();
-            var path = await recorder.FinishWriting();
+            var audioClip = recorder.FinishWriting();
             // Playback the recording
-            Debug.Log($"Recorded audio to path: {path}");
-            Handheld.PlayFullScreenMovie($"file://{path}");
+            AudioSource.PlayClipAtPoint(audioClip, Vector3.zero);
         }
     }
 }

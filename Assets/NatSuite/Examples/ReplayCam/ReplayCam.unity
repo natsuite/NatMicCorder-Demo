@@ -328,8 +328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2528afad4b8de44fd8b1f699e80c2df1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoWidth: 1280
-  videoHeight: 720
+  videoWidth: 720
+  videoHeight: 1280
   recordMicrophone: 1
   rawImage: {fileID: 459462463}
   aspectFitter: {fileID: 459462465}
