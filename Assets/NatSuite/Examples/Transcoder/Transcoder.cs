@@ -45,7 +45,7 @@ namespace NatSuite.Examples {
                 case RuntimePlatform.WindowsEditor: path = Path.Combine(Directory.GetCurrentDirectory(), $"Assets/StreamingAssets/{videoName}"); break;
                 default: return "";
             }
-            return "file://" + path;
+            return path;
         }
     }
 }
