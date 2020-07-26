@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/NatSuite/Examples/Transcoder/Transcoder.unity
     guid: 178d7fbc1c1944917a0e4e89d9367a04
+  - enabled: 0
+    path: Assets/NatSuite/Examples/BarcodeDetector/BarcodeDetector.unity
+    guid: 16cdc94ef1c094e8db295bcc311bb518
   m_configObjects: {}

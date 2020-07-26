@@ -15,8 +15,8 @@ namespace NatSuite.Examples {
     public class ReplayCam : MonoBehaviour {
 
         [Header(@"Recording")]
-        public int videoWidth = 1280;
-        public int videoHeight = 720;
+        public int videoWidth = 720;
+        public int videoHeight = 1280;
         public bool recordMicrophone;
 
         [Header(@"UI")]
@@ -28,6 +28,15 @@ namespace NatSuite.Examples {
         private IAudioDevice audioDevice; // Used to record microphone
 
         async void Start () {
+            // Request permissions
+            if (!await MediaDeviceQuery.RequestPermissions<CameraDevice>()) {
+                Debug.LogError("User did not grant camera permissions");
+                return;
+            }
+            if (!await MediaDeviceQuery.RequestPermissions<AudioDevice>()) {
+                Debug.LogError("User did not grant microphone permissions");
+                return;
+            }
             // Get a microphone
             var micQuery = new MediaDeviceQuery(MediaDeviceQuery.Criteria.AudioDevice);
             audioDevice = micQuery.currentDevice as IAudioDevice;
@@ -44,12 +53,15 @@ namespace NatSuite.Examples {
 
         public void StartRecording () {
             // Create recorder
-            var microphone = recordMicrophone ? audioDevice : null;
             var clock = new RealtimeClock();
-            recorder = new MP4Recorder(videoWidth, videoHeight, 30, microphone?.sampleRate ?? 0, microphone?.channelCount ?? 0);
+            if (recordMicrophone)
+                recorder = new MP4Recorder(videoWidth, videoHeight, 30, audioDevice.sampleRate, audioDevice.channelCount);
+            else
+                recorder = new MP4Recorder(videoWidth, videoHeight, 30);
             // Stream media samples to the recorder
             cameraInput = new CameraInput(recorder, clock, Camera.main);
-            microphone?.StartRunning((sampleBuffer, timestamp) => recorder.CommitSamples(sampleBuffer, clock.timestamp));
+            if (recordMicrophone)
+                audioDevice.StartRunning((sampleBuffer, timestamp) => recorder.CommitSamples(sampleBuffer, clock.timestamp));
         }
 
         public async void StopRecording () {
